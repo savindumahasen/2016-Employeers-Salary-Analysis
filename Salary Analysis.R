@@ -32,7 +32,7 @@ library("zoo")
 install.packages('plyr')
 library('plyr')
 salary$job_title_rank<- revalue(job_title_rank,c( Senior=1))
-write.csv(fertilizer_data,"fertilizer_data_New.csv")
+write.csv(salary,"salary_data_New.csv")
 
 ## filling the null values
 salary$location_latitude  <- na.fill(location_latitude, 122.09)
