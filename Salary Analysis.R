@@ -28,6 +28,12 @@ install.packages("zoo")
 ## call the zoo library
 library("zoo")
 
+## covert the job title rank into the numeric values
+install.packages('plyr')
+library('plyr')
+salary$job_title_rank<- revalue(job_title_rank,c( Senior=1))
+write.csv(fertilizer_data,"fertilizer_data_New.csv")
+
 ## filling the null values
 salary$location_latitude  <- na.fill(location_latitude, 122.09)
 salary$location_longitude <- na.fill(location_longitude, 100.02)
