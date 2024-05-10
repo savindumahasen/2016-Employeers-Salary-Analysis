@@ -9,3 +9,6 @@ View(salary)
 
 ## to  get the first five records
 print(head(salary))
+
+## get the data types and number of objects
+str(salary)
