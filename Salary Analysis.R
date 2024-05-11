@@ -31,12 +31,21 @@ library("zoo")
 ## covert the job title rank into the numeric values
 install.packages('plyr')
 library('plyr')
-salary$job_title_rank<- revalue(job_title_rank,c( Senior=1))
-write.csv(salary,"salary_data_New.csv")
+salary$job_title_rank<- revalue(job_title_rank,c( Senior=1, Intern=2, Junior=3))
+salary$job_title_category<- revalue(job_title_category,c(Engineering=1,Software=2,Other=3,Web=4,Data=5))
+write.csv(salary,"C:\\Users\\THIS PC\\Desktop\\2016-Hackers-Salary-Analysis\\salaries_new.csv")
+
+## import the new salary dataset
+salary_new <- read.csv("C:\\Users\\THIS PC\\Desktop\\2016-Hackers-Salary-Analysis\\salaries_new.csv")
 
 ## filling the null values
 salary$location_latitude  <- na.fill(location_latitude, 122.09)
 salary$location_longitude <- na.fill(location_longitude, 100.02)
+salary$job_title_rank <- na.fill(job_title_rank,2)
+salary$signing_bonus <- na.fill(signing_bonus, 0)
+salary$stock_value_bonus <- na.fill(stock_value_bonus,0)
+salary$annual_bonus <- na.fill(annual_bonus,0)
+
 View(salary)
 ## Normality Testing
 
