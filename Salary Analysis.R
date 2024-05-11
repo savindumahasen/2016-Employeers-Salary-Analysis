@@ -56,3 +56,9 @@ attach(salary_new)
 ## view the new dataset
 View(salary_new)
 ## Normality Testing
+install.packages("nortest")
+## call the library
+library("nortest")
+
+## anderson darling testing
+
