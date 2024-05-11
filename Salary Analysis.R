@@ -39,16 +39,20 @@ install.packages("zoo")
 library("zoo")
 salary$location_latitude  <- na.fill(location_latitude, 122.09)
 salary$location_longitude <- na.fill(location_longitude, 100.02)
-salary$job_title_rank <- na.fill(job_title_rank,2)
+salary$job_title_rank <- na.fill(job_title_rank,1)
 salary$signing_bonus <- na.fill(signing_bonus, 0)
 salary$stock_value_bonus <- na.fill(stock_value_bonus,0)
 salary$annual_bonus <- na.fill(annual_bonus,0)
 
 write.csv(salary,"C:\\Users\\THIS PC\\Desktop\\2016-Hackers-Salary-Analysis\\salaries_new.csv")
+## import the new salary dataset
+salary_new  <- read.csv("C:\\Users\\THIS PC\\Desktop\\2016-Hackers-Salary-Analysis\\salaries_new.csv")
 
-View(salary)
+View(salary_new)
+## detach the old salary dataset
+detach(salary)
+## attach the new salary dataset
+attach(salary_new)
+## view the new dataset
+View(salary_new)
 ## Normality Testing
-
-## Anderson darling testing
-
-ad.test()
