@@ -32,7 +32,8 @@ library("zoo")
 install.packages('plyr')
 library('plyr')
 salary$job_title_rank<- revalue(job_title_rank,c( Senior=1, Intern=2, Junior=3))
-salary$job_title_category<- revalue(job_title_category,c(Engineering=1,Software=2,Other=3,Web=4,Data=5))
+salary$job_title_category<- revalue(job_title_category,c(Engineering=1,Software=2,Other=3,Web=4,Data=5,Management=6,
+                                                         Operations=7))
 
 ## filling the null values
 install.packages("zoo")
@@ -68,3 +69,25 @@ lillie.test(annual_base_pay)
 
 ## shapirowiki testing
 shapiro.test(annual_base_pay)
+
+
+## anderson darling testing
+ad.test(location_latitude)
+
+## lillifor testing
+lillie.test(location_latitude)
+
+## shapro testing
+shapiro.test(location_latitude)
+
+## aderson darling tesing
+ad.test(location_longitude)
+
+## lillifor testing
+lillie.test(location_longitude)
+
+## shapiro testing
+shapiro.test(location_longitude)
+
+## anderson darling testing
+ad.test(job_title_category)
