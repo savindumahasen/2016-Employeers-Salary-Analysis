@@ -61,4 +61,10 @@ install.packages("nortest")
 library("nortest")
 
 ## anderson darling testing
+ad.test(annual_base_pay)
 
+## lillifor testing
+lillie.test(annual_base_pay)
+
+## shapirowiki testing
+shapiro.test(annual_base_pay)
