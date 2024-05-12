@@ -44,9 +44,9 @@ salary$job_title <- revalue(job_title, c(systemsengineer=1, seniordeveloper=2,
 
 ## write into the new csv file
 
-write.csv(salary,"C:\\Users\\THIS PC\\Desktop\\2016-Hackers-Salary-Analysis\\salaries_new.csv")
+write.csv(salary,"C:\\Users\\THIS PC\\Desktop\\2016-Employee-Salary-Analysis\\salaries_new.csv")
 ## import the new salary dataset
-salary_new  <- read.csv("C:\\Users\\THIS PC\\Desktop\\2016-Hackers-Salary-Analysis\\salaries_new.csv")
+salary_new  <- read.csv("C:\\Users\\THIS PC\\Desktop\\2016-Employee-Salary-Analysis\\salaries_new.csv")
 ## View the new salary dataset
 View(salary_new)
 ## detach the old salary dataset
