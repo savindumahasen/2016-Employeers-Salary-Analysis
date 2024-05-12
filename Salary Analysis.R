@@ -145,3 +145,99 @@ hist(job_title, main="Job title distribution",
 
 curve(dnorm(x,mean=mean(job_title, na.rm=TRUE),
             sd=sd(job_title, na.rm =TRUE)), add = TRUE)
+
+
+## anderson darling testing
+ad.test(job_title_category)
+
+## Lillefor testing
+lillie.test(job_title_category)
+
+## shapiro wiki testing
+shapiro.test(job_title_category)
+
+## Graphical analysis
+hist(job_title_category, main="Job Title Category Distribution",
+     xlab = "Job Title Category Category",
+     ylab = "Job Title Category", prob=TRUE)
+
+curve(dnorm(x,mean=mean(job_title_category, na.rm=TRUE),
+            sd=sd(job_title_category, na.rm=TRUE)), add = TRUE)
+
+
+## summary statistics
+summary(job_title_category)
+
+## anderson darling testing
+ad.test(total_experience_years)
+
+## lillifer testing
+lillie.test(total_experience_years)
+
+## shapiro wiki testing
+shapiro.test(total_experience_years)
+
+## Graphical Analysis
+hist(total_experience_years, main="Total Experience Years",
+     xlab = "Total Experience Years Category",
+     ylab = "Total Experience Years", prob=TRUE)
+
+curve(dnorm(x, mean=mean(total_experience_years, na.rm = TRUE),
+            sd=sd(total_experience_years, na.rm = TRUE)), add = TRUE)
+
+## summary  statistics
+summary(total_experience_years)
+
+## anderson darling 
+ad.test(employer_experience_years)
+
+## lillifer testing
+lillie.test(employer_experience_years)
+
+## shapiro wiki testing
+shapiro.test(employer_experience_years)
+
+## Graphical Analysis
+hist(employer_experience_years, main = "Employee Expereince Years Distribution",
+     xlab = "Employee Expereince Category",
+     ylab = "Employee Expereince", prob= TRUE)
+
+curve(dnorm(x, mean=mean(employer_experience_years, na.rm = TRUE),
+            sd=sd(employer_experience_years, na.rm = TRUE)), add = TRUE)
+
+## anderson darling testing
+ad.test(signing_bonus)
+
+## lillifer testing
+lillie.test(signing_bonus)
+## sahpiro wiki testing
+shapiro.test(signing_bonus)
+
+## Graphical Analysis
+hist(signing_bonus, main = "Signing Bonus Distribution",
+     xlab = "Signing Bonus Category",
+     ylab = "Signing Bonus", prob=TRUE)
+
+curve(dnorm(x,mean=mean(signing_bonus,na.rm = TRUE),
+            sd=sd(signing_bonus, na.rm=TRUE)), add = TRUE)
+
+## summary statistics
+summary(signing_bonus)
+
+## anderson darling testing
+ad.test(annual_bonus)
+## lillifer testing
+lillie.test(annual_bonus)
+## shapiro wiki testing
+shapiro.test(annual_bonus)
+
+## Graphical Analysis
+hist(annual_bonus, main="Annual Bonus Distribution",
+     xlab = "Annual Bonus Category",
+     ylab = "Annual Bonus", prob=TRUE)
+
+curve(dnorm(x, mean=mean(annual_bonus, na.rm = TRUE),
+            sd=sd(annual_base_pay, na.rm = TRUE)), add = TRUE)
+
+## summary statistics
+summary(annual_bonus)
