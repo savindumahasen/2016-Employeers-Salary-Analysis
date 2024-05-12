@@ -36,8 +36,8 @@ salary$job_title_category<- revalue(job_title_category,c(Engineering=1,Software=
                                                          Operations=7))
 
 ## filling the null values
-install.packages("zoo")
-library("zoo")
+install.packages('zoo')
+library('zoo')
 salary$location_latitude  <- na.fill(location_latitude, 122.09)
 salary$location_longitude <- na.fill(location_longitude, 100.02)
 salary$job_title_rank <- na.fill(job_title_rank,1)
@@ -48,7 +48,7 @@ salary$annual_bonus <- na.fill(annual_bonus,0)
 write.csv(salary,"C:\\Users\\THIS PC\\Desktop\\2016-Hackers-Salary-Analysis\\salaries_new.csv")
 ## import the new salary dataset
 salary_new  <- read.csv("C:\\Users\\THIS PC\\Desktop\\2016-Hackers-Salary-Analysis\\salaries_new.csv")
-
+## View the new salary dataset
 View(salary_new)
 ## detach the old salary dataset
 detach(salary)
