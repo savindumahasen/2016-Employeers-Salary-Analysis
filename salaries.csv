@@ -6,7 +6,7 @@ salary_id,employer_name,location_name,location_state,location_country,location_l
 16,tetra tech,"madison, wi",WI,US,43.1,-89.5,leadinterviewer,Other,4,2.5,45000,0,1500,3/21/2016 13:03
 17,knewton,new york city,NY,US,38,-97,seniorsoftwareengineer,Software,8,2,135000,0,0,3/21/2016 13:03
 24,pensco trust company,"denver, co",CO,US,39.82,-105.1,seniorsoftwareengineer,Software,10,1.5,120000,0,6000,3/21/2016 13:04
-40,oracle,"bala cynwyd, pa",PA,US,40.01,-75.22,studentinternco-op,Other,0,0,24,0,0,3/21/2016 13:06
+40,oracle,"bala cynwyd, pa",PA,US,40.01,-75.22,studentinterncoop,Other,0,0,24,0,0,3/21/2016 13:06
 45,klick,"toronto, canada",CA,CA,60,-95,fullstackdeveloper,Web,5,3,85000,0,5000,3/21/2016 13:06
 48,nbc universal,new york,NY,US,38,-97,senioranalyst,Data,2,1.5,55000,0,0,3/21/2016 13:07
 59,quick left,boulder co,CO,US,38,-97,seniordeveloper,Software,6,1,120000,0,0,3/21/2016 13:08
