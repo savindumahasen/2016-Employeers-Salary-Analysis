@@ -113,10 +113,6 @@ lillie.test(location_longitude)
 ## shapiro testing
 shapiro.test(location_longitude)
 
-## anderson darling testing
-ad.test(job_title_category)
-
-
 ## Graphical Analysis
 
 hist(location_longitude, main="Location Longitude Distribution",
@@ -148,6 +144,9 @@ hist(job_title, main="Job title distribution",
 
 curve(dnorm(x,mean=mean(job_title, na.rm=TRUE),
             sd=sd(job_title, na.rm =TRUE)), add = TRUE)
+
+## summary statistics
+summary(job_title)
 
 
 ## anderson darling testing
@@ -181,7 +180,7 @@ lillie.test(total_experience_years)
 shapiro.test(total_experience_years)
 
 ## Graphical Analysis
-hist(total_experience_years, main="Total Experience Years",
+hist(total_experience_years, main="Total Experience Years Distribution",
      xlab = "Total Experience Years Category",
      ylab = "Total Experience Years", prob=TRUE)
 
@@ -207,6 +206,9 @@ hist(employer_experience_years, main = "Employee Expereince Years Distribution",
 
 curve(dnorm(x, mean=mean(employer_experience_years, na.rm = TRUE),
             sd=sd(employer_experience_years, na.rm = TRUE)), add = TRUE)
+
+## summary statistics
+summary(employer_experience_years)
 
 ## anderson darling testing
 ad.test(signing_bonus)
@@ -244,3 +246,4 @@ curve(dnorm(x, mean=mean(annual_bonus, na.rm = TRUE),
 
 ## summary statistics
 summary(annual_bonus)
+
