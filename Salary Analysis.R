@@ -19,6 +19,9 @@ attach(salary)
 ## view the dataset again
 View(salary)
 
+## check the summary  statistics of the dataset
+summary(salary)
+
 ## check the null values
 salary[!complete.cases(salary),]
 
