@@ -247,3 +247,41 @@ curve(dnorm(x, mean=mean(annual_bonus, na.rm = TRUE),
 ## summary statistics
 summary(annual_bonus)
 
+## anderson darling testing
+ad.test(location_state)
+
+## lillifer testing
+lillie.test(location_state)
+
+## shapiro wiki testing
+shapiro.test(location_state)
+
+## Graphical Analysis
+hist(location_state, main = "Location State Distribution",
+     xlab = "Location State Category",
+     ylab = "Location State", prob=TRUE)
+
+curve(dnorm(x, mean=mean(location_state, na.rm=TRUE),
+            sd=sd(location_state, na.rm = TRUE)), add = TRUE)
+## summary statistics
+summary(location_state)
+
+## anderson darling testing
+ad.test(location_country)
+
+## lillefor testing
+lillie.test(location_country)
+
+## shapiro wiki testing
+shapiro.test(location_country)
+
+## Graphical Analysis
+hist(location_country, main="Location Country Distribution",
+     xlab = "Location Country Category",
+     ylab = "Location Country", prob=TRUE)
+
+curve(dnorm(x, mean=mean(location_country, na.rm = TRUE),
+            sd=sd(location_country, na.rm = TRUE)), add=TRUE)
+
+## summary statistics
+summary(location_country)
