@@ -283,5 +283,76 @@ hist(location_country, main="Location Country Distribution",
 curve(dnorm(x, mean=mean(location_country, na.rm = TRUE),
             sd=sd(location_country, na.rm = TRUE)), add=TRUE)
 
+## anderson d
+
 ## summary statistics
 summary(location_country)
+
+## Correlational Analysis
+
+cor.test(annual_base_pay, location_latitude, method="spearman", alternative="two.sided")
+
+## install the Rcmdr library
+install.packages('Rcmdr')
+library('Rcmdr')
+
+## scatterplot diagram
+
+scatterplot(annual_base_pay~location_latitude, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="location_latitude", ylab="annual_base_pay", 
+            main="Location_latitude vs Anual_base_pay scatterplot", data=salary_new)
+
+cor.test(annual_base_pay, location_longitude, method="spearman", alternative = "two.sided")
+
+## scatterplot diagram
+
+scatterplot(annual_base_pay~location_longitude, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="location_longitude", ylab="annual_base_pay", 
+            main="Location_longitude vs Anual_base_pay scatterplot", data=salary_new)
+
+cor.test(annual_base_pay, job_title, method="spearman", alternative = "two.sided")
+## scatterplot diagram
+
+scatterplot(annual_base_pay~job_title, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="job title", ylab="annual_base_pay", 
+            main="Job_Title vs Anual_base_pay scatterplot", data=salary_new)
+
+cor.test(annual_base_pay, job_title_category, method = "spearman", alternative = "two.sided")
+
+
+## scatterplot diagram
+
+scatterplot(annual_base_pay~job_title_category, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="job title category", ylab="annual_base_pay", 
+            main="Job_Title_Category vs Anual_base_pay scatterplot", data=salary_new)
+
+cor.test(annual_base_pay, total_experience_years, method="spearman", alternative = "two.sided")
+
+## scatterplot diagram
+
+scatterplot(annual_base_pay~total_experience_years, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="total expereince years", ylab="annual_base_pay", 
+            main="Total Expereince Years vs Anual_base_pay scatterplot", data=salary_new)
+
+cor.test(annual_base_pay, employer_experience_years, method = "spearman", alternative = "two.sided")
+
+## scatterplot digram
+
+scatterplot(annual_base_pay~employer_experience_years, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="employer expereince years", ylab="annual_base_pay", 
+            main="Employer Expereince Years vs Anual_base_pay scatterplot", data=salary_new)
+
+cor.test(annual_base_pay, signing_bonus, method="spearman", alternative = "two.sided")
+
+## scatterplot diagram
+
+scatterplot(annual_base_pay~signing_bonus, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="signing bonus", ylab="annual_base_pay", 
+            main="Signing Bonusvs Anual_base_pay scatterplot", data=salary_new)
+
+cor.test(annual_base_pay, annual_bonus, method="spearman", alternativ="two.sided")
+
+
+scatterplot(annual_base_pay~annual_bonus, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="annual bonus", ylab="annual_base_pay", 
+            main="Annual Bonus vs Anual_base_pay scatterplot", data=salary_new)
