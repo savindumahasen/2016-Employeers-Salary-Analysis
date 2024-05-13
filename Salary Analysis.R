@@ -242,7 +242,7 @@ hist(annual_bonus, main="Annual Bonus Distribution",
      ylab = "Annual Bonus", prob=TRUE)
 
 curve(dnorm(x, mean=mean(annual_bonus, na.rm = TRUE),
-            sd=sd(annual_base_pay, na.rm = TRUE)), add = TRUE)
+            sd=sd(annual_bonus, na.rm = TRUE)), add = TRUE)
 
 ## summary statistics
 summary(annual_bonus)
