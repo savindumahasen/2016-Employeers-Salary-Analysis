@@ -356,3 +356,22 @@ cor.test(annual_base_pay, annual_bonus, method="spearman", alternativ="two.sided
 scatterplot(annual_base_pay~annual_bonus, regLine=TRUE, smooth=FALSE, 
             boxplots=FALSE, xlab="annual bonus", ylab="annual_base_pay", 
             main="Annual Bonus vs Anual_base_pay scatterplot", data=salary_new)
+
+
+cor.test(annual_base_pay, location_state, method="spearman", alternative = "two.sided")
+
+## scatterplot diagram
+
+scatterplot(annual_base_pay~location_state, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="location state", ylab="annual_base_pay", 
+            main="Location state vs Anual_base_pay scatterplot", data=salary_new)
+
+cor.test(annual_base_pay, location_country, method = "spearman", alternative = "two.sided")
+
+scatterplot(annual_base_pay~location_country, regLine=TRUE, smooth=FALSE, 
+            boxplots=FALSE, xlab="location country", ylab="annual_base_pay", 
+            main="Location country vs Anual_base_pay scatterplot", data=salary_new)
+
+
+## Regression Analysis
+
