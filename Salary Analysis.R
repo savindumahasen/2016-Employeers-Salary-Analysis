@@ -375,3 +375,17 @@ scatterplot(annual_base_pay~location_country, regLine=TRUE, smooth=FALSE,
 
 ## Regression Analysis
 
+## Multi  corr inearity effect
+
+cor.test(location_longitude, location_latitude, method = "spearman", alternative="two.sided")
+
+## Multi linear regression  analysis
+
+multi_linear_model <- lm(annual_base_pay~location_longitude+
+                                     total_experience_years+employer_experience_years+
+                                     signing_bonus+location_country, model=TRUE)
+multi_linear_model
+
+
+##summary statistics
+summary(multi_linear_model)
