@@ -2,7 +2,7 @@
 
 ## import the dataset
 
-salary <- read.csv("C:\\Users\\THIS PC\\Desktop\\2016-Employee-Salary-Analysis\\salaries.csv")
+salary <- read.csv("salaries.csv")
 
 ## View the dataset
 View(salary)
@@ -19,6 +19,15 @@ attach(salary)
 ## view the dataset again
 View(salary)
 
+## One-way Anova test
+My_employeesal_jobtitle <- aov(annual_base_pay~job_title)
+summary(My_employeesal_jobtitle)
+
+My_employeesal_jobtitlecategory <- aov(annual_base_pay~job_title_category)
+summary(My_employeesal_jobtitlecategory)
+
+
+
 ## check the summary  statistics of the dataset
 summary(salary)
 
@@ -30,6 +39,10 @@ install.packages("zoo")
 
 ## call the zoo library
 library("zoo")
+
+
+## One-way Anova testing
+My_Sal_Model <- aov()
 
 ## covert the text into the numeric values
 install.packages('plyr')
@@ -117,7 +130,7 @@ shapiro.test(location_longitude)
 
 hist(location_longitude, main="Location Longitude Distribution",
      xlab="location_longitude Category",
-     ylab="locaation_longitude",
+     ylab="location_longitude",
      prob=TRUE)
 curve(dnorm(x, mean=mean(location_longitude, na.rm=TRUE), 
             sd=sd(location_longitude, na.rm =TRUE)), add=TRUE)
